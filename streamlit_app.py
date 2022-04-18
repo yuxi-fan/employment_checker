@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 from multipage import MultiPage
-from apps import uiclaims, covid# import your pages here
+from apps import uiclaims, low_wage, employment, covid# import your pages here
 
 
 
@@ -18,6 +18,8 @@ st.subheader("build by Chaoyu Li, Joanna Xiao, Yuxi Fan")
 # Add all your applications (pages) here
 app.add_page("UI Claims", uiclaims.app)
 app.add_page("COVID Trend", covid.app)
+app.add_page("Employment Claims", employment.app)
+app.add_page("Low Wage Trend", low_wage.app)
 # The main app
 app.run()
 
