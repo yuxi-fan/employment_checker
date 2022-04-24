@@ -3,8 +3,10 @@ from google.cloud import firestore
 import numpy as np
 import pandas as pd
 
+
+
 from multipage import MultiPage
-from apps import uiclaims, low_wage, employment, covid# import your pages here
+from apps import main, visualization, cityweekly, model, water, heatmap# import your pages here
 
 
 
@@ -12,14 +14,19 @@ from apps import uiclaims, low_wage, employment, covid# import your pages here
 app = MultiPage()
 
 # Title of the main page
-st.title("Employment Checker")
-st.header("A website you can used to check employment status in the United State")
-st.subheader("build by Chaoyu Li, Joanna Xiao, Yuxi Fan")
+st.image('pics/title.png', use_column_width = True)
+
+st.header("A website you can use to check employment status in the United States")
+st.write("build by Chaoyu Li, Joanna Xiao, Yuxi Fan")
+
+
 # Add all your applications (pages) here
-app.add_page("UI Claims", uiclaims.app)
-app.add_page("COVID Trend", covid.app)
-app.add_page("Employment Claims", employment.app)
-app.add_page("Low Wage Trend", low_wage.app)
+app.add_page("Home Page", main.app)
+app.add_page("Visualizations", visualization.app)
+app.add_page("Unemployment rate for major cities", cityweekly.app)
+app.add_page("Prediction Model", model.app)
+app.add_page("US Heatmap", heatmap.app)
+app.add_page("China and the US comparison", water.app)
 # The main app
 app.run()
 
