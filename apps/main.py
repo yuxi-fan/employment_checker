@@ -49,7 +49,7 @@ def app():
         st.image('pics/page4.png')
 
     st.subheader('🇺🇸 US Heatmap')
-    st.write('In this page, we present the heatmap that depicts the latest unemployment rate in the United Stats. Each cell reports a numeric count of unemployment rate, with larger counts associated with darker colorings. By clicking the color palette on the left side, you can see the corresponding states that falls into the chosen unemployment range.')
+    st.write('In this page, we present the heatmap that depicts the latest unemployment rate in the United States. Each cell reports a numeric count of unemployment rate, with larger counts associated with darker colorings. By clicking the color palette on the left side, you can see the corresponding states that falls into the chosen unemployment range.')
     with st.expander("See details"):
         st.write("""
             The image below shows the overview of the US Heatmap.

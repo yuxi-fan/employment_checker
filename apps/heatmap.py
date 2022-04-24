@@ -7,7 +7,7 @@ import plotly.express as px
 import streamlit.components.v1 as components
 
 def app():
-    st.title("Latest Employment Rate Change in the United State")
+    st.title("Latest Employment Rate Change in the United States")
     HtmlFile = open("frontend/heatmap_emp.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     print(source_code)
